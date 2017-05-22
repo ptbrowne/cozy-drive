@@ -4,6 +4,7 @@
   "icon": "app-icon.svg",
   "description": "File manager for Cozy v3",
   "source": "https://github.com/cozy/cozy-drive.git@build",
+  "editor": "Cozy",
   "developer": {
     "name": "Cozy",
     "url": "https://cozy.io"
@@ -19,8 +20,20 @@
       "folder": "/",
       "index": "index.html",
       "public": false
+    },
+    "/services": {
+      "folder": "/",
+      "index": "services.html",
+      "public": false
     }
   },
+  "intents": [
+    {
+      "action": "OPEN",
+      "type": ["io.cozy.files"],
+      "href": "/services"
+    }
+  ],
   "version": "3.0.0",
   "licence": "AGPL-3.0",
   "permissions": {
